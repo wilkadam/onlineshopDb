@@ -44,8 +44,7 @@ Sklep Elektroniczny
         <div class="row">
             <div class="col-lg-12">
                 <div class="title-all text-center">
-                    <h1>Featured Mobiles</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                    <h1>Smartfony</h1>
                 </div>
             </div>
         </div>
@@ -54,19 +53,16 @@ Sklep Elektroniczny
             <div class="col-lg-3 col-md-6 special-grid" >
                 <div class="products-single fix shadow-sm p-2 bg-white rounded">
                     <a href="/productdetail/{{mobile.id}}">
-                    <div class="box-img-hover ctr" style="height:255px;">
-                        <div class="type-lb">
-                            <p class="sale">Sale</p>
-                        </div>
+                    <div class="box-img-hover ctr" style="height:300px;">
                         <img src="{{mobile.product_img.url}}" class="img-fluid" alt="Image">
                         <div class="mask-icon"></div>
                     </div></a>
-                    <div class="why-text text-center" style="height:155px;">
+                    <div class="why-text text-center" style="height:200px;">
                         <h4><a href="/productdetail/">{{mobile.product_name}}</a></h4>
-                        <h5>₹ {{mobile.price|intcomma}}</h5>
+                        <h5>{{mobile.price|intcomma}} zł</h5>
                         <div class="mt-2">
-                            <a href="/buynow/{{mobile.id}}" class="btn hvr-hover cart" style="color:white">Buy Now</a>
-                            <a href="/addtocart/{{mobile.id}}" class="btn hvr-hover cart" style="color:white">Add to Cart</a>
+                            <a href="/buynow/{{mobile.id}}" class="btn hvr-hover cart" style="color:white">Kup Teraz</a>
+                            <a href="/addtocart/{{mobile.id}}" class="btn hvr-hover cart" style="color:white">Dodaj do koszyka</a>
                         </div>
                     </div>
                 </div>
@@ -75,7 +71,7 @@ Sklep Elektroniczny
         </div>
         <div class="row">
             <div class="col-lg-12 ctr">
-                <a href="/products?category=1" class="btn hvr-hover" style="color:white">Show All</a>
+                <a href="/products?category=1" class="btn hvr-hover" style="color:white">Pokaż wszystkie</a>
             </div>
         </div>
     </div>
@@ -85,8 +81,7 @@ Sklep Elektroniczny
         <div class="row">
             <div class="col-lg-12">
                 <div class="title-all text-center">
-                    <h1>Featured Laptops</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                    <h1>Laptopy</h1>
                 </div>
             </div>
         </div>
@@ -95,19 +90,16 @@ Sklep Elektroniczny
             <div class="col-lg-3 col-md-6 special-grid">
                 <div class="products-single fix shadow-sm p-2 bg-white rounded">
                     <a href="/productdetail/{{laptop.id}}">
-                    <div class="box-img-hover ctr" style="height:255px;">
-                        <div class="type-lb">
-                            <p class="sale">Sale</p>
-                        </div>
+                    <div class="box-img-hover ctr" style="height:300px;">
                         <img src="{{laptop.product_img.url}}" class="img-fluid" alt="Image">
                         <div class="mask-icon"></div>
                     </div></a>
-                    <div class="why-text text-center" style="height:155px;">
+                    <div class="why-text text-center" style="height:200px;">
                         <h4><a href="/productdetail/{{laptop.id}}">{{laptop.product_name}}</a></h4>
-                        <h5>₹ {{laptop.price|intcomma}}</h5>
+                        <h5>{{laptop.price|intcomma}} zł</h5>
                         <div class="mt-2">
-                            <a href="/buynow/{{laptop.id}}" class="btn hvr-hover cart" style="color:white">Buy Now</a>
-                            <a href="/addtocart/{{laptop.id}}" class="btn hvr-hover cart" style="color:white">Add to Cart</a>
+                            <a href="/buynow/{{laptop.id}}" class="btn hvr-hover cart" style="color:white">Kup Teraz</a>
+                            <a href="/addtocart/{{laptop.id}}" class="btn hvr-hover cart" style="color:white">Dodaj do koszyka</a>
                         </div>
                     </div>
                 </div>
@@ -116,7 +108,7 @@ Sklep Elektroniczny
         </div>
         <div class="row">
             <div class="col-lg-12 ctr">
-                <a href="/products/?category=2" class="btn hvr-hover" style="color:white">Show All</a>
+                <a href="/products/?category=2" class="btn hvr-hover" style="color:white">Pokaż wszystkie</a>
             </div>
         </div>
     </div>
@@ -126,8 +118,7 @@ Sklep Elektroniczny
         <div class="row">
             <div class="col-lg-12">
                 <div class="title-all text-center">
-                    <h1>Featured TVs</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                    <h1>Telewizory</h1>
                 </div>
             </div>
         </div>
@@ -136,16 +127,16 @@ Sklep Elektroniczny
             <div class="col-lg-3 col-md-6 special-grid">
                 <div class="products-single fix shadow-sm p-2 bg-white rounded">
                     <a href="/productdetail/{{tv.id}}">
-                    <div class="box-img-hover ctr" style="height:255px;">
+                    <div class="box-img-hover ctr" style="height:300px;">
                         <img src="{{tv.product_img.url}}" class="img-fluid" alt="Image">
                         <div class="mask-icon"></div>
                     </div></a>
-                    <div class="why-text text-center" style="height:155px;">
+                    <div class="why-text text-center" style="height:200px;">
                         <h4><a href="/productdetail/{{tv.id}}">{{tv.product_name}}</a></h4>
-                        <h5>₹ {{tv.price|intcomma}}</h5>
+                        <h5>{{tv.price|intcomma}} zł</h5>
                         <div class="mt-2">
-                            <a href="/buynow/{{tv.id}}" class="btn hvr-hover cart" style="color:white">Buy Now</a>
-                            <a href="/addtocart/{{tv.id}}" class="btn hvr-hover cart" style="color:white">Add to Cart</a>
+                            <a href="/buynow/{{tv.id}}" class="btn hvr-hover cart" style="color:white">Kup Teraz</a>
+                            <a href="/addtocart/{{tv.id}}" class="btn hvr-hover cart" style="color:white">Dodaj do koszyka</a>
                         </div>
                     </div>
                 </div>
@@ -154,7 +145,7 @@ Sklep Elektroniczny
         </div>
         <div class="row">
             <div class="col-lg-12 ctr">
-                <a href="/products/?category=3" class="btn hvr-hover" style="color:white">Show All</a>
+                <a href="/products/?category=3" class="btn hvr-hover" style="color:white">Pokaż wszystkie</a>
             </div>
         </div>
     </div>
@@ -164,8 +155,7 @@ Sklep Elektroniczny
         <div class="row">
             <div class="col-lg-12">
                 <div class="title-all text-center">
-                    <h1>Featured Headphones</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                    <h1>Słuchawki</h1>
                 </div>
             </div>
         </div>
@@ -174,19 +164,17 @@ Sklep Elektroniczny
             <div class="col-lg-3 col-md-6 special-grid">
                 <div class="products-single fix shadow-sm p-2 bg-white rounded">
                     <a href="/productdetail/{{headphone.id}}">
-                    <div class="box-img-hover ctr" style="height:255px;">
-                        <div class="type-lb">
-                            <p class="sale">Sale</p>
-                        </div>
+                    <div class="box-img-hover ctr" style="height:280px;">
+
                         <img src="{{headphone.product_img.url}}" class="img-fluid" alt="Image">
                         <div class="mask-icon"></div>
                     </div></a>
-                    <div class="why-text text-center" style="height:155px;">
+                    <div class="why-text text-center" style="height:200px;">
                         <h4><a href="/productdetail/{{headphone.id}}">{{headphone.product_name}}</a></h4>
-                        <h5>₹ {{headphone.price|intcomma}}</h5>
+                        <h5>{{headphone.price|intcomma}} zł</h5>
                         <div class="mt-2">
-                            <a href="/buynow/{{headphone.id}}" class="btn hvr-hover cart" style="color:white">Buy Now</a>
-                            <a href="/addtocart/{{headphone.id}}" class="btn hvr-hover cart" style="color:white">Add to Cart</a>
+                            <a href="/buynow/{{headphone.id}}" class="btn hvr-hover cart" style="color:white">Kup Teraz</a>
+                            <a href="/addtocart/{{headphone.id}}" class="btn hvr-hover cart" style="color:white">Dodaj do koszyka</a>
                         </div>
                     </div>
                 </div>
@@ -195,7 +183,7 @@ Sklep Elektroniczny
         </div>
         <div class="row">
             <div class="col-lg-12 ctr">
-                <a href="/products?category=1" class="btn hvr-hover" style="color:white">Show All</a>
+                <a href="/products?category=4" class="btn hvr-hover" style="color:white">Pokaż wszystkie</a>
             </div>
         </div>
     </div>

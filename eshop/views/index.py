@@ -8,9 +8,8 @@ def index(request):
     mobiles = Product.objects.filter(category_id=1)
     laptops = Product.objects.filter(category_id=2)
     tvs = Product.objects.filter(category_id=3)
-    headphones = Product.objects.filter(category_id=6)
+    headphones = Product.objects.filter(category_id=4)
     homeapps = Product.objects.filter(category_id=9)
-    kitapps = Product.objects.filter(category_id=8)
     categories = Category.objects.all()
     carts = Cart.objects.filter(user_id=current_user.id)
 
@@ -29,12 +28,11 @@ def index(request):
     params = {
         'customer':customer,
         'products': products,
-        'Telefony': mobiles,
-        'laptopy': laptops,
+        'mobiles': mobiles,
+        'laptops': laptops,
         'tvs': tvs,
         'headphones': headphones,
         'homeapps': homeapps,
-        'kitapps': kitapps,
         'categories':categories,
         'qty':qty,
         'total':total,

@@ -22,14 +22,14 @@ def checkout(request):
     grand_total = total + shipping
 
     if request.method == "POST":
-        firstname = request.POST['Imię']
-        lastname = request.POST['Nazwisko']
-        phone = request.POST['Telefon']
-        house_no = request.POST['Numer domu']
-        street = request.POST['Ulica']
-        city = request.POST['Miasto']
-        postal_code = request.POST['Kod pocztowy']
-        code = "OD-" + get_random_string(10).upper()
+        firstname = request.POST['firstname']
+        lastname = request.POST['lastname']
+        phone = request.POST['phone']
+        house_no = request.POST['house_no']
+        street = request.POST['street']
+        state = request.POST['state']
+        city = request.POST['city']
+        pin = request.POST['pin']
 
         order = Order(
             user_id = currentuser.id,

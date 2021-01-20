@@ -39,22 +39,22 @@ class Signup(View):
 
         # Form Validations
         if User.objects.filter(email=email):
-            messages.success(request, "E-mail Already Registered!!!")
+            messages.success(request, "Istnieje już konto o podanym adresie e-mail!")
             return render(request, 'signup.html', values)
-        if len(fname)>10 and len(lname)>10:
-            messages.success(request, "First or Last Name too long!!!")
+        if len(fname)>10 and len(lname)>15:
+            messages.success(request, "Zbyt długie imię!")
             return render(request, 'signup.html', values)
         if not fname.isalpha() or not lname.isalpha():
-            messages.warning(request,"Name must contain only letters.")
+            messages.warning(request,"Imię może zawierać tylko litery")
             return render(request, 'signup.html', values)
-        if len(str(phone))!=10:
-            messages.warning(request,"Phone number must contain 10 digits.")
+        if len(str(phone))!=9:
+            messages.warning(request,"Numer telefonu musi zawierać 9 cyfr!")
             return render(request, 'signup.html', values)
-        if len(pass1)<5:
-            messages.warning(request, "Password too short!!! It must have atleast 5 characters.")
+        if len(pass1)<8:
+            messages.warning(request, "Hasło musi zawierać conajmniej 8 znaków!")
             return render(request, 'signup.html', values)
         if pass1!=pass2:
-            messages.warning(request, "Passwords don't match!!!")
+            messages.warning(request, "Hasła do siebie nie pasują!")
             return render(request, 'signup.html', values)
 
         new_user = User.objects.create_user(

@@ -12,7 +12,7 @@ Class-based views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
-from .views import index, signup, login, details, products, cartoptions, buynow, checkout, logout, cart, account, productdetail
+from .views import index, signup, login, details, products, cartoptions, buynow, checkout, logout, cart, account, productdetail, wishlist
 from .views import search, updateprofile, changepassword, contact, cancelproduct
 
 urlpatterns = [
@@ -27,6 +27,7 @@ urlpatterns = [
     path("productdetail/<int:prid>", productdetail.productdetail, name="ProductDetail"),
     path("deletefromcart/<int:prid>", cartoptions.deletefromcart, name="DeletefromCart"),
     path("deleteallfromcart/<int:prid>", cartoptions.deleteallfromcart, name="DeleteAllfromCart"),
+    path("addtowishlist/<int:prid>", wishlist.addtowishlist, name="AddfromWishlist"),
     path("cart/", cart.cart, name="Cart"),
     path("clearcart/", cartoptions.clearcart, name="ClearCart"),
     path("checkout/", checkout.checkout, name="CheckOut"),

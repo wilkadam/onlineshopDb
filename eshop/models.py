@@ -79,6 +79,8 @@ class Order(models.Model):
     total = models.FloatField()
     code = models.CharField(max_length=15, default="")
     placed_at = models.DateTimeField(auto_now_add=True)
+    pin = models.IntegerField(null=True)
+
 
     def __str__(self):
         return self.code + " to " + self.first_name + "\t" + self.last_name
