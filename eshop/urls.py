@@ -9,6 +9,8 @@ Class-based views
     1. Add an import:  from other_app.views import Home
     2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
 """
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import path
 from .views import index, signup, login, details, products, cartoptions, buynow, checkout, logout, cart, account, productdetail
 from .views import search, updateprofile, changepassword, contact, cancelproduct
