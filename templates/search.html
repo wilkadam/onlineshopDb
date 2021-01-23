@@ -3,15 +3,22 @@
 {% load humanize %}
 
 {% block title %}
-Search Results | Lifestyle Electronics
+Wyniki wyszukiwania | E-SHOP
 {% endblock %}
 
 {% block body %}
 
+<div class="navbar-header col-lg-3 col-md-5 col-sm-12">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+    <a class="navbar-brand" href="/"><img src="{% static 'images/logo.png' %}" width="150 px"/></a>
+</div>
+
 <div class="shadow p-2 rounded" style="background-color:#e9ecef; color:black">
     <div class="row text-center font-weight-bold">
         <div class="col-lg-2 col-md-4 col-sm-6">
-            <p><a href="/search/?search={{search}}">All Products</a></p>
+            <p><a href="/search/?search={{search}}">Wszystkie produkty</a></p>
         </div>
         {% for category in categories %}
         <div class="col-lg-2 col-md-4 col-sm-6">
@@ -36,7 +43,7 @@ Search Results | Lifestyle Electronics
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-sm-12 col-xs-12">
-                <h1 class="text-center">Search results for '{{search}}'</h1>
+                <h1 class="text-center">Wyniki wyszukiwania dla '{{search}}'</h1>
                 <div class="product-item-filter row">
                     <div class="col-12 col-sm-10 text-center text-sm-left">
                         <div class="toolbar-sorter-right">

@@ -188,6 +188,43 @@ Sklep Elektroniczny
         </div>
     </div>
 
+<div class="products-box" style="padding:20px 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title-all text-center">
+                    <h1>Monitory</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for monitor in monitors %}
+            <div class="col-lg-3 col-md-6 special-grid">
+                <div class="products-single fix shadow-sm p-2 bg-white rounded">
+                    <a href="/productdetail/{{monitor.id}}">
+                    <div class="box-img-hover ctr" style="height:280px;">
+
+                        <img src="{{monitor.product_img.url}}" class="img-fluid" alt="Image">
+                        <div class="mask-icon"></div>
+                    </div></a>
+                    <div class="why-text text-center" style="height:200px;">
+                        <h4><a href="/productdetail/{{monitor.id}}">{{headphone.product_name}}</a></h4>
+                        <h5>{{monitor.price|intcomma}} zł</h5>
+                        <div class="mt-2">
+                            <a href="/buynow/{{monitor.id}}" class="btn hvr-hover cart" style="color:white">Kup Teraz</a>
+                            <a href="/addtocart/{{monitor.id}}" class="btn hvr-hover cart" style="color:white">Dodaj do koszyka</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col-lg-12 ctr">
+                <a href="/products?category=5" class="btn hvr-hover" style="color:white">Pokaż wszystkie</a>
+            </div>
+        </div>
+    </div>
 <!-- End Products  -->
 
 {% endblock %}

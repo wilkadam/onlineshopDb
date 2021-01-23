@@ -10,6 +10,7 @@ def index(request):
     tvs = Product.objects.filter(category_id=3)
     headphones = Product.objects.filter(category_id=4)
     homeapps = Product.objects.filter(category_id=9)
+    monitors = Product.objects.filter(category_id=5)
     categories = Category.objects.all()
     carts = Cart.objects.filter(user_id=current_user.id)
 
@@ -33,6 +34,7 @@ def index(request):
         'tvs': tvs,
         'headphones': headphones,
         'homeapps': homeapps,
+        'monitors': monitors,
         'categories':categories,
         'qty':qty,
         'total':total,

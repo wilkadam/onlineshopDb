@@ -4,8 +4,15 @@
 {% load humanize %}
 
 {% block title %}
-Checkout | Lifestyle Electronics
+Kasa | E-SHOP
 {% endblock %}
+
+<div class="navbar-header col-lg-3 col-md-5 col-sm-12">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+    <a class="navbar-brand" href="/"><img src="{% static 'images/logo.png' %}" width="150 px"/></a>
+</div>
 
 {% block body %}
 <div class="cart-box-main">
@@ -14,7 +21,7 @@ Checkout | Lifestyle Electronics
             <div class="col-md-12 col-lg-12 mb-3">
                 <div class="odr-box">
                     <div class="title-left">
-                        <h3>Shopping Cart</h3>
+                        <h3>Koszyk</h3>
                     </div>
                     <div class="rounded p-2 bg-light">
                         {% for cart in carts %}
@@ -54,7 +61,7 @@ Checkout | Lifestyle Electronics
                 <div class="col-sm-6 col-lg-6 mb-3">
                     <div class="checkout-address">
                         <div class="title-left">
-                            <h3>Billing address</h3>
+                            <h3>Adres</h3>
                         </div>
                         <form class="needs-validation" action='/checkout/' method="POST">
                             {% csrf_token %}
@@ -84,7 +91,7 @@ Checkout | Lifestyle Electronics
                             <div class="row">
                                 <div class="col-md-5 mb-3">
                                     <label for="state">Kod pocztowy *</label>
-                                    <input class="form-control wide w-100" name="state" value="{{customer.state}}" placeholder="" required>
+                                    <input class="form-control wide w-100" name="state" value="{{customer.pin}}" placeholder="" required>
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="city">Miasto *</label>
@@ -107,11 +114,11 @@ Checkout | Lifestyle Electronics
                                     <div class="d-block my-3">
                                         <div class="custom-control custom-radio">
                                             <input name="credit" name="paymentMethod" type="radio" class="custom-control-input">
-                                            <label class="custom-control-label" for="credit">Credit card</label>
+                                            <label class="custom-control-label" for="credit">Karta kredytowa</label>
                                         </div>
                                         <div class="custom-control custom-radio">
                                             <input name="debit" name="paymentMethod" type="radio" class="custom-control-input">
-                                            <label class="custom-control-label" for="debit">Debit card</label>
+                                            <label class="custom-control-label" for="debit">Karta debetowa</label>
                                         </div>
                                         <div class="custom-control custom-radio">
                                             <input name="paypal" name="paymentMethod" type="radio" class="custom-control-input">
@@ -120,26 +127,18 @@ Checkout | Lifestyle Electronics
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
-                                            <label for="cc-name">Name on card</label>
-                                            <input type="text" class="form-control" name="cc-name" placeholder="" > <small class="text-muted">Full name as displayed on card</small>
-                                            <div class="invalid-feedback"> Name on card is required </div>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <label for="cc-number">Credit card number</label>
+                                            <label for="cc-number">Numer karty</label>
                                             <input type="text" class="form-control" name="cc-number" placeholder="" >
-                                            <div class="invalid-feedback"> Credit card number is required </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-3 mb-3">
-                                            <label for="cc-expiration">Expiration</label>
+                                            <label for="cc-expiration">Data ważności</label>
                                             <input type="text" class="form-control" name="cc-expiration" placeholder="" >
-                                            <div class="invalid-feedback"> Expiration date required </div>
                                         </div>
                                         <div class="col-md-3 mb-3">
                                             <label for="cc-expiration">CVV</label>
                                             <input type="text" class="form-control" name="cc-cvv" placeholder="" >
-                                            <div class="invalid-feedback"> Security code required </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <div class="payment-icon">
@@ -159,7 +158,7 @@ Checkout | Lifestyle Electronics
                     </div>
                 </div>
             </div>
-            <div class="shopping-box text-center"> <button type="submit" class="ml-auto btn hvr-hover" style="color:white">Place Order</button> </div>
+            <div class="shopping-box text-center"> <button type="submit" class="ml-auto btn hvr-hover" style="color:grey">Złóż zamówienie.</button> </div>
         </div>
     </div>
 </div>
