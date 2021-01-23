@@ -16,7 +16,7 @@ class CartAdmin(admin.ModelAdmin):
     list_display = ['user', 'product', 'qty', 'price', 'amount']
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ['code', 'user', 'first_name', 'last_name','house_no', 'street', 'city', 'total', 'placed_at']
+    list_display = ['code', 'user', 'first_name', 'last_name', 'house_no', 'street', 'city', 'pin', 'total', 'placed_at']
 
 class OrderProductAdmin(admin.ModelAdmin):
     list_display = ['order','user' , 'product', 'price', 'qty', 'amount', 'status']

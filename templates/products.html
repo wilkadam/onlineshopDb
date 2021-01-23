@@ -12,7 +12,7 @@ Produkty
 <div class="shadow p-2 rounded" style="background-color:#e9ecef; color:black">
     <div class="row text-center font-weight-bold">
         <div class="col-lg-2">
-            <p><a href="/products">All Products</a></p>
+            <p><a href="/products">Wszystkie produkty</a></p>
         </div>
         {% for category in categories %}
         <div class="col-lg-2">
@@ -43,7 +43,7 @@ Produkty
                 </div>
                 {% else %}
                 <div class="title-all text-center">
-                    <h1 class="text-center">All Products</h1>
+                    <h1 class="text-center">Wszystkie produkty</h1>
                 </div>
                 {% endif %}
                 <div class="product-item-filter row">
@@ -72,9 +72,6 @@ Produkty
                                     <div class="products-single fix shadow-sm p-2 bg-white rounded">
                                         <a href="/productdetail/{{product.id}}">
                                         <div class="box-img-hover ctr" style="height:255px;">
-                                            <div class="type-lb">
-                                                <p class="sale">{{product.tag}}</p>
-                                            </div>
                                             <img src="{{product.product_img.url}}" class="img-fluid" alt="Image">
                                             <div class="mask-icon"></div>
                                         </div></a>

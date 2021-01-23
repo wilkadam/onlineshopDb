@@ -27,9 +27,9 @@ def checkout(request):
         phone = request.POST['phone']
         house_no = request.POST['house_no']
         street = request.POST['street']
-        state = request.POST['state']
         city = request.POST['city']
         pin = request.POST['pin']
+        code = "OD-" + get_random_string(10).upper()
 
         order = Order(
             user_id = currentuser.id,
@@ -39,7 +39,7 @@ def checkout(request):
             house_no = house_no,
             street = street,
             city = city,
-            postal_code = postal_code,
+            pin = pin,
             total = grand_total,
             code = code
         )
@@ -57,7 +57,7 @@ def checkout(request):
             orderpr.save()
         
         Cart.objects.filter(user_id=currentuser.id).delete()
-        messages.success(request, "Zamówienie zostało złożone")
+        messages.success(request, "Order has been placed. Thank You 😊")
         return redirect('ShopHome')
     
     details = {
@@ -67,7 +67,6 @@ def checkout(request):
         'qty':qty,
         'total':total,
         'grand_total':grand_total,
-        'shipping':shipping
     }
     
     return render(request, 'checkout.html', details)

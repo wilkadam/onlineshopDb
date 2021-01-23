@@ -22,6 +22,7 @@ class Signup(View):
         house = request.POST['house']
         street = request.POST['street']
         city = request.POST['city']
+        pin = request.POST['pin']
         pass1 = request.POST['pass1']
         pass2 = request.POST['pass2']
         uname = email
@@ -34,6 +35,7 @@ class Signup(View):
             'phone': phone,
             'house': house,
             'street': street,
+            'pin': pin,
             'city': city,
         }
 
@@ -72,6 +74,7 @@ class Signup(View):
             house_no=house,
             street=street.capitalize(),
             city=city.capitalize(),
+            pin=pin,
         )
         customer.save()
 
@@ -79,5 +82,5 @@ class Signup(View):
         if user is not None:
             login(request, user)
 
-        messages.success(request, "Account Created Successfully!!!")
+        messages.success(request, "Utworzono konto!")
         return redirect('ShopHome')
