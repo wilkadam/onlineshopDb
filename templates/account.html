@@ -36,13 +36,13 @@
                         <h1>Informacje o profilu</h1>
                     </div>
                     <div class="title-left" id="profile">
-                        <h1 class="font-weight-bold"><i class="fas fa-user-circle pr-2"></i>Profile</h1>
+                        <h1 class="font-weight-bold"><i class="fas fa-user-circle pr-2"></i>Profil</h1>
                     </div>
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-12" style="margin-bottom:20px;">
                             <div class="mb-2 ctr">
-                                <a href="/account/updateprofile" class="btn hvr-hover cart mx-1" style="color:white">Aktualizuj profil</a>
-                                <a href="/account/changepassword" class="btn hvr-hover cart mx-1" style="color:white">Zmień hasło</a>
+                                <a href="/account/updateprofile" class="btn hvr-hover cart mx-1" style="color:grey">Aktualizuj profil</a>
+                                <a href="/account/changepassword" class="btn hvr-hover cart mx-1" style="color:grey">Zmień hasło</a>
                             </div>
                         </div>
                         <div class="col-lg-8 col-md-8 col-sm-12" style="margin-bottom:20px;">
@@ -82,13 +82,13 @@
                                 <table class="table">
                                     <thead>
                                         <tr class="text-center">
-                                            <th>S. No.</th>
-                                            <th>Image</th>
-                                            <th>Product Name</th>
-                                            <th>Price</th>
-                                            <th>Added On</th>
-                                            <th>Add to Cart</th>
-                                            <th>Remove</th>
+                                            <th>L.p.</th>
+                                            <th>Zdjęcie</th>
+                                            <th>Nazwa</th>
+                                            <th>Cena</th>
+                                            <th>Dodano</th>
+                                            <th>Dodaj do koszyka</th>
+                                            <th>Usuń</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -108,7 +108,7 @@
                                                 </a>
                                             </td>
                                             <td class="price-pr text-center">
-                                                <p>₹ {{wishlist.product.price|floatformat:2|intcomma}}</p>
+                                                <p> {{wishlist.product.price|floatformat:2}} zł</p>
                                             </td>
                                             <td class="quantity-box text-center">
                                                 <p>{{wishlist.added_on}}</p>
@@ -152,11 +152,11 @@
                                     <table class="table">
                                         <thead>
                                             <tr class="text-center">
-                                                <th style="padding:0.25rem;">S. No.</th>
-                                                <th style="padding:0.25rem;">Product Name</th>
-                                                <th style="padding:0.25rem;">Price</th>
-                                                <th style="padding:0.25rem;">Quantity</th>
-                                                <th style="padding:0.25rem;">Total</th>
+                                                <th style="padding:0.25rem;">L.P</th>
+                                                <th style="padding:0.25rem;">Nazwa produktu</th>
+                                                <th style="padding:0.25rem;">Cena</th>
+                                                <th style="padding:0.25rem;">Ilość</th>
+                                                <th style="padding:0.25rem;">Całkowity koszt</th>
                                                 <th style="padding:0.25rem;">Status</th>
                                                 <th style="padding:0.25rem;"></th>
                                             </tr>

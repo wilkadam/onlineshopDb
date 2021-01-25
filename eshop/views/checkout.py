@@ -57,7 +57,7 @@ def checkout(request):
             orderpr.save()
         
         Cart.objects.filter(user_id=currentuser.id).delete()
-        messages.success(request, "Order has been placed. Thank You 😊")
+        messages.success(request, "Zamówienie zostało złożone.")
         return redirect('ShopHome')
     
     details = {

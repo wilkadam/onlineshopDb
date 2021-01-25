@@ -13,7 +13,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
 from .views import index, signup, login, details, products, cartoptions, buynow, checkout, logout, cart, account, productdetail, wishlist
-from .views import search, updateprofile, changepassword, contact, cancelproduct
+from .views import search, updateprofile, changepassword, cancelproduct
 
 urlpatterns = [
     path("", index.index, name="ShopHome"),
@@ -32,7 +32,6 @@ urlpatterns = [
     path("clearcart/", cartoptions.clearcart, name="ClearCart"),
     path("checkout/", checkout.checkout, name="CheckOut"),
     path("cancelproduct/<int:orid>/<int:prid>", cancelproduct.cancelProduct, name="CancelProduct"),
-    path("contactus/", contact.contact, name="ContactUs"),
     path("account/", account.account, name="Account"),
     path("account/updateprofile/", updateprofile.updateprofile, name="UpdateProfile"),
     path("account/changepassword/", changepassword.changepassword, name="ChangePassword"),

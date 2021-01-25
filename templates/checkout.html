@@ -37,20 +37,20 @@ Kasa | E-SHOP
             <div class="col-md-12 col-lg-12 mb-3">
                 <div class="odr-box">
                     <div class="title-left mb-4">
-                        <h3>Twoje zamówienie</h3>
+                        <h4>Twoje zamówienie</h4>
                     </div>
                     <div class="d-flex">
-                        <h4></h4>
-                        <div class="ml-auto font-weight-bold">{{total|floatformat:2|intcomma}} zł</div>
+                        <h4>Koszt produktów</h4>
+                        <div class="ml-auto font-weight-bold">{{total|floatformat:2}} zł</div>
                     </div>
                     <hr class="mb-4">
-                    <div class="d-flex">
+                    <div class="d-flex shipping">
                         <h4>Koszt dostawy</h4>
-                        <div class="ml-auto font-weight-bold"> {{shipping|floatformat:2}} zł</div>
+                        <div class="ml-auto font-weight-bold">{{shipping|floatformat:2}} 14,99 zł</div>
                     </div>
                     <hr>
                     <div class="d-flex gr-total">
-                        <h5>Całkowity koszt</h5>
+                        <h4>Całkowity koszt</h4>
                         <div class="ml-auto h5">{{grand_total|floatformat:2}} zł</div>
                     </div>
                     <hr>
@@ -91,7 +91,7 @@ Kasa | E-SHOP
                             <div class="row">
                                 <div class="col-md-5 mb-3">
                                     <label for="state">Kod pocztowy *</label>
-                                    <input class="form-control wide w-100" name="state" value="{{customer.pin}}" placeholder="" required>
+                                    <input class="form-control wide w-100" name="pin" value="{{customer.pin}}" placeholder="" required>
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="city">Miasto *</label>

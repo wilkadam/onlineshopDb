@@ -105,16 +105,16 @@ Produkty
                                     <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
                                         <div class="why-text full-width list-product">
                                             <h4>{{product.product_name}}</h4>
-                                            <h5>₹ {{product.price|intcomma}}</h5>
+                                            <h5> {{product.price|intcomma}} zł</h5>
                                             <ol class="my-2">
-                                                <li><strong>Brand : {{product.brand}}</strong></li>
-                                                <li><strong>Category : {{product.category.category_name}}</strong></li>
+                                                <li><strong>Marka : {{product.brand}}</strong></li>
+                                                <li><strong>Kategoria : {{product.category.category_name}}</strong></li>
                                                 <li></li>
                                                 <li></li>
                                             </ol>
-                                            <a class="btn hvr-hover my-2" href="/productdetail/{{product.id}}">View</a><br>
-                                            <a href="/buynow/{{product.id}}" class="btn hvr-hover cart" style="color:white">Buy Now</a>
-                                            <a class="btn hvr-hover" href="/addtocart/{{product.id}}">Add to Cart</a>
+                                            <a class="btn hvr-hover my-2" href="/productdetail/{{product.id}}">Wyświetl</a><br>
+                                            <a href="/buynow/{{product.id}}" class="btn hvr-hover cart" style="color:grey">Kup teraz</a>
+                                            <a class="btn hvr-hover" href="/addtocart/{{product.id}}">Dodaj do koszyka</a>
                                         </div>
                                     </div>
                                 </div>
